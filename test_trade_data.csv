@@ -1,0 +1,6 @@
+date,symbol,action,quantity,price
+2023-01-01,AAPL,buy,10,150
+2023-01-02,GOOG,sell,5,120
+2023-01-03,TSLA,buy,8,700
+2023-01-04,AAPL,sell,3,155
+2023-01-05,TSLA,buy,10,680

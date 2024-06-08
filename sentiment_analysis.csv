@@ -1,0 +1,4 @@
+timestamp,content,textblob_sentiment,vader_sentiment
+2024-05-23 22:42:23,This is a great stock!,1.0,0.6588
+2024-05-23 22:43:23,Not sure about the future of this stock.,-0.125,-0.2411
+2024-05-23 22:44:23,I think this stock is overvalued.,0.0,0.0

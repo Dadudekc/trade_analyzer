@@ -1,0 +1,38 @@
+
+    Performance Report
+    ==================
+    Total Profit/Loss: $30546.97
+    Win Rate: 38.06%
+    Average Trade Duration (hours): 45.71
+
+    Best Trade:
+    -----------
+    Symbol: SQ
+    Date: 2021-04-07 14:04:58.739820+00:00
+    Profit: $15950.51
+
+    Worst Trade:
+    ------------
+    Symbol: SQ
+    Date: 2021-04-06 19:50:35.228345+00:00
+    Loss: $-15178.87
+
+    Most Profitable Symbol:
+    -----------------------
+    Symbol: SQ
+    Total Profit: $30075.83
+
+    Least Profitable Symbol:
+    ------------------------
+    Symbol: AAL
+    Total Loss: $-4532.07
+
+    Recommendations:
+    ----------------
+    1. **Replicate Successful Strategies:** Analyze your best trade on 2021-04-07 14:04:58.739820+00:00 with SQ to understand what worked and try to replicate those strategies.
+    2. **Learn from Mistakes:** Identify and learn from your worst trade on 2021-04-06 19:50:35.228345+00:00 with SQ to avoid repeating mistakes.
+    3. **Focus on Profitable Symbols:** Consider increasing trades in SQ as it has been the most profitable.
+    4. **Review Unprofitable Symbols:** Analyze trades in AAL to understand why they resulted in losses and consider reducing exposure.
+    5. **Diversified Strategy:** Maintain a diversified trading strategy to spread risk and avoid heavy losses on a single trade.
+    6. **Continuous Improvement:** Regularly review and refine your trading strategies based on performance data to enhance profitability.
+    

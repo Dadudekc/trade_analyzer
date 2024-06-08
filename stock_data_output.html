@@ -1,0 +1,92 @@
+
+    <html>
+    <head>
+        <title>Stock Data and News Headlines</title>
+        <style>
+            body { font-family: Arial, sans-serif; }
+            .stock-table, .news-headlines, .sentiment-table { margin: 20px; }
+            .stock-table th, .stock-table td, .sentiment-table th, .sentiment-table td { padding: 10px; border: 1px solid #ccc; }
+            .news-headlines h2 { font-size: 1.2em; }
+        </style>
+        <script>
+            function sortTable(n, tableName) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById(tableName);
+                switching = true;
+                dir = "asc"; 
+                while (switching) {
+                    switching = false;
+                    rows = table.rows;
+                    for (i = 1; i < (rows.length - 1); i++) {
+                        shouldSwitch = false;
+                        x = rows[i].getElementsByTagName("TD")[n];
+                        y = rows[i + 1].getElementsByTagName("TD")[n];
+                        if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        switchcount++; 
+                    } else {
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Stock Data</h1>
+        <table id="stockTable" class="stock-table">
+            <tr><th onclick="sortTable(0, 'stockTable')">Stock Name</th><th onclick="sortTable(1, 'stockTable')">Stock Price</th></tr>
+    
+        </table>
+        <h1>News Headlines</h1>
+        <div class="news-headlines">
+    
+        </div>
+        <h1>Sentiment Analysis</h1>
+        <table id="sentimentTable" class="sentiment-table">
+            <tr><th onclick="sortTable(0, 'sentimentTable')">Timestamp</th><th onclick="sortTable(1, 'sentimentTable')">Content</th><th onclick="sortTable(2, 'sentimentTable')">TextBlob Sentiment</th><th onclick="sortTable(3, 'sentimentTable')">VADER Sentiment</th></tr>
+    <tr><td>2024-06-05 20:40:52</td><td>$TSLARetested 172. Tomorrow doesn't look good at all</td><td>0.7</td><td>-0.3412</td></tr><tr><td>2024-06-05 20:40:24</td><td>$tsla2020 year of da 🧠 chop chop huckleberries $$$ pattern was 25 bucks.   Survive bahhhhh ride to da ⏰ magazine man of year 🐑 chasers
+
+❤️👑🌈🦄Bullish</td><td>0.0</td><td>-0.34</td></tr><tr><td>2024-06-05 20:34:17</td><td>@Doozio@FlynancialAnalystin 2027 if TSLA is trading at $175 are you going to keep bringing up the time man of the year top?</td><td>0.5</td><td>0.2023</td></tr><tr><td>2024-06-05 20:37:28</td><td>$MNDRgod damn ……..what’s going on here$SPY$CTNT$TSLA$NVDA</td><td>0.0</td><td>-0.4019</td></tr><tr><td>2024-06-05 20:37:27</td><td>$nvda#2market cap
+Just a game, nothing more, so don't fall in love with it .... LoL 🤣 
+
+Just remember what happened to$tslashares before split then after
+
+This bubble will be another greatest opportunity to sell chip sector soon 😁</td><td>0.48</td><td>0.9124</td></tr><tr><td>2024-06-05 20:36:30</td><td>$SPYCome on$tslaLongs, I know what youre thinking so lets all say it together,  
+ 
+"Hey Elon!,....$nvda$qqq$gm</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:35:52</td><td>$TSLAalso put to call ratio is up 1.6 now</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:33:49</td><td>$TSLANVDA now worth over $3T while this is parked at 60%+ off the ATH and down some nearly 30% YTD. Don't worry though. It's not like Tesla Inc. is just a Car Company or something... TSLA vs. NVDA at the end of February 2024. I took this screenshot for a day like today. Points and Laughs at You! Haha.</td><td>0.1173611111111111</td><td>0.8803</td></tr><tr><td>2024-06-05 20:31:21</td><td>$TSLATHE MORE EMOTIONAL THE REPLY, the more UNDERWATER THEY ARE. If they reply back over and over means they are levered to the wrong way trade :(
+
+LOAD THE BOATS!!!!!Bullish</td><td>-0.041666666666666664</td><td>-0.5871</td></tr><tr><td>2024-06-05 20:30:37</td><td>$TSLASHORT ACCOUNTS IMPLODING AS WE SPEAKBullish</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:27:24</td><td>$TSLAlast hopeful catalyst and ONLY stock that will benefit from it whereas the whole market has been running up without it 😂Bullish</td><td>0.1</td><td>0.6597</td></tr><tr><td>2024-06-05 20:18:40</td><td>$tslaim super bullish because I hope there's a rate cutBullish</td><td>0.3333333333333333</td><td>0.7783</td></tr><tr><td>2024-06-05 20:27:19</td><td>$EXPRQ$gme$AMC$TSLA@Moonman321@RealVision@gcisme@Acemaker12@MillennialInvestments</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:23:00</td><td>$EXPRQon behalf of all express Inc shareholders, Mr. Kurzon, thank you. Complicity in naked shorting is now clearly seen.cases.stretto.com/public/x3...</td><td>0.05000000000000001</td><td>0.6369</td></tr><tr><td>2024-06-05 20:25:58</td><td>$BLBDA company that can be a a potential "mini"$TSLAfor eBuses ?Bullish</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:24:16</td><td>$TSLAthe longer the suppression the bigger the pop</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:24:16</td><td>$TSLABullish</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:22:27</td><td>$TSLAdo something</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:22:14</td><td>$VUZIno doubt Garmin will have some killer apps for their AR Glasses … fitness coaching and the works.
+Luckily Vuzix did all the leg work as far as the tech, so all the customers such as Garmin could focus on their products & apps.
+
+Vuzix could just let the billions in revenue roll in, in 5 years .. providing the “Made in 🇺🇸” pieces to the consumer customers.
+
+Who’d want anything less than storied Vuzix Inside, which works with militaries & was the first AR/VR company ?$TSLAof the AR Sector.
+Will be$META(iOS & Device) vs$VUZI(OEM) for consumer imo. Google & Apple seem to have flopped huge</td><td>0.1527777777777778</td><td>0.0516</td></tr><tr><td>2024-06-05 19:32:14</td><td>$VUZISee the themes ? Fitness & GPS. 
+Huge Opening. 
+“Vuzix Inside” like Intel or$NVDAThey sell BILLIONS in watches.Bullish</td><td>0.4000000000000001</td><td>0.7096</td></tr><tr><td>2024-06-05 20:20:53</td><td>$TSLALess job opening and people are losing jobs.  Rate cut won't matter if you don't have a job.  You won't buy a car even at zero percent interest rate.Bearish</td><td>0.0</td><td>-0.196</td></tr><tr><td>2024-06-05 20:18:40</td><td>$tslaim super bullish because I hope there's a rate cutBullish</td><td>0.3333333333333333</td><td>0.7783</td></tr><tr><td>2024-06-05 20:19:27</td><td>$TSLAtechnicals are not holding and fundamentals are waning so my outlook in the short term is not bullish at this time</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:19:03</td><td>$TSLAwhere does this go after burning  calls and puts ?</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:18:40</td><td>$tslaim super bullish because I hope there's a rate cutBullish</td><td>0.3333333333333333</td><td>0.7783</td></tr><tr><td>2024-06-05 20:17:35</td><td>$TSLAthis thing broke the symmetrical triangle to the downside and I’m guessing that in two and a half to three weeks this will be at 168 before it reverses upward</td><td>-0.16666666666666666</td><td>-0.5859</td></tr><tr><td>2024-06-05 20:16:46</td><td>$COIN$META$SPY$TSLA$SPYPatience —> pays, spy really went crazy $134.14+ should’ve kept my 0dte on$SPXi rolled on the dip missed out on 20k+Bullish</td><td>-0.19999999999999998</td><td>-0.5965</td></tr><tr><td>2024-06-05 19:01:09</td><td>full transparency on all of our plays$SPY$COIN$TSLA$METAlink in bio 👆</td><td>0.35</td><td>0.0</td></tr><tr><td>2024-06-05 20:15:12</td><td>$TSLAOMG! It closed green! 57Million volume! QQQ up 2% at ATH! 
+$200 tomorrow!Bearish</td><td>-0.2453125</td><td>0.0</td></tr><tr><td>2024-06-05 20:14:04</td><td>$TSLAsuch a wanker</td><td>0.0</td><td>-0.5423</td></tr><tr><td>2024-06-05 20:13:30</td><td>$TSLAMASSIVE UNDER PERFORMANCE</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:13:14</td><td>$TSLAfucking pos . wish i had all this money in nvda . 
+hate that egotistical pos elon</td><td>-0.8</td><td>-0.4404</td></tr><tr><td>2024-06-05 20:12:13</td><td>$TSLAsomeone want to tell Elon to quit picking fights on Twitter? lmaoooo just look at META stock who he was beefing with their lead engineer. Just like DIS went up when hey told Bon Iger GFY</td><td>0.0</td><td>0.0258</td></tr><tr><td>2024-06-05 20:12:09</td><td>$TSLAthank nvda this trash wasn't down 5% todayBearish</td><td>-0.15555555555555559</td><td>0.0</td></tr><tr><td>2024-06-05 20:11:06</td><td>$TSLAcomplete dumpster fire waiting on a dumb vote to decide if it wants to do anything. Only stock that is constantly being held back waiting on news.
+
+Next month I’m sure we will be waiting on delivery numbers on cybertrucks or some shit.
+
+It’s just constant f**kery with Tesla</td><td>0.013888888888888888</td><td>-0.8225</td></tr><tr><td>2024-06-05 20:10:09</td><td>$TSLANvdia is the play until Friday.</td><td>0.0</td><td>0.34</td></tr><tr><td>2024-06-05 20:09:11</td><td>$TSLAwhose spent all day looking at this only to see it close flat 😂Bullish</td><td>-0.041666666666666664</td><td>-0.2263</td></tr><tr><td>2024-06-05 20:06:53</td><td>$TSLAUnderperformed in such a strong bull day.@Elon_Muskwish you could express your 100% unbiased commitment to Tesla.</td><td>0.21666666666666665</td><td>0.7003</td></tr><tr><td>2024-06-05 20:06:17</td><td>$TSLA$180 tomorrowBullish</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:06:02</td><td>$tsla</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:05:12</td><td>$TSLAFucking outstanding day</td><td>0.5</td><td>0.6124</td></tr><tr><td>2024-06-05 20:04:29</td><td>$TSLALets face it Bulls...This thing did not budge for you in power house. be ready to cry in the AM. no Cap we riding down.Bearish</td><td>0.2</td><td>-0.4215</td></tr><tr><td>2024-06-05 20:03:41</td><td>$TSLA</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:02:32</td><td>$TSLAtodays morning dip won’t happen tomorrow so whoever is holding calls overnight getting paid tomorrow morning 🇺🇸🍾🫡</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:01:50</td><td>$tsla</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 20:01:15</td><td>$TSLAto be honest this is not an innovative tech company anymore. Its just a regular EV company lol 😂$SPY$NVDA$AAPLBearish</td><td>0.47500000000000003</td><td>0.4203</td></tr><tr><td>2024-06-05 20:00:33</td><td>$TSLA175 incredibly heavy</td><td>-0.2</td><td>0.0</td></tr><tr><td>2024-06-05 19:59:59</td><td>$TSLABearish</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 19:59:58</td><td>$TSLADon’t let me downBullish</td><td>0.0</td><td>0.0</td></tr><tr><td>2024-06-05 19:59:10</td><td>$CHPTev infrastructure investment will be back with Biden$BLNK$TSLA$EVGO</td><td>0.0</td><td>0.0</td></tr>
+        </table>
+    </body>
+    </html>
+    

@@ -1,0 +1,46 @@
+{
+    "thresholds": {
+        "significant_trade": {
+            "value": 1000,
+            "description": "A trade is considered significant if its dollar amount is at least $1000. Focus on analyzing these trades to understand their success factors."
+        },
+        "large_loss": {
+            "value": 500,
+            "description": "A loss is considered large if it reaches or exceeds $500. Review these losses carefully to understand and mitigate risks."
+        },
+        "high_win_rate": {
+            "value": 0.75,
+            "description": "A win rate is considered high if it is 75% or above. Strive to maintain this rate for a sustainable trading strategy."
+        },
+        "long_trade_duration": {
+            "value": 48,
+            "description": "A trade duration is considered long if it is 48 hours or more. Evaluate the impact of holding trades for extended periods."
+        }
+    },
+    "recommendations": {
+        "replicate_successful_strategies": {
+            "action": "Analyze the market conditions, entry and exit points, and other factors that led to successful trades. Document these factors and look for patterns to replicate in future trades.",
+            "description": "Successful trades often follow specific patterns or strategies. By documenting and analyzing these factors, you can identify successful strategies and replicate them in the future."
+        },
+        "learn_from_mistakes": {
+            "action": "Conduct a thorough review of trades that resulted in losses. Identify what went wrong and implement changes to avoid making the same mistakes in the future.",
+            "description": "Learning from mistakes is crucial. By understanding the reasons behind losses, you can avoid repeating the same errors and improve your trading strategy."
+        },
+        "focus_profitable_symbols": {
+            "action": "Allocate more resources and focus on trading symbols that have consistently brought profits. Monitor these symbols closely and adjust strategies as needed.",
+            "description": "Symbols that consistently yield profits should be the focus of your trading efforts. By allocating more resources to these symbols, you can maximize returns."
+        },
+        "review_unprofitable_symbols": {
+            "action": "Analyze why certain symbols resulted in losses and either refine your strategy for these symbols or reduce exposure.",
+            "description": "Unprofitable symbols can drag down overall performance. By understanding why these symbols are underperforming, you can decide whether to adjust your strategy or reduce exposure."
+        },
+        "diversified_strategy": {
+            "action": "Avoid putting all your capital into a single trade. Diversify across different symbols, sectors, and trading strategies to spread risk.",
+            "description": "Diversification is key to managing risk. Spread your investments across various symbols, sectors, and strategies to minimize the impact of any single loss."
+        },
+        "continuous_improvement": {
+            "action": "Stay informed about the latest market trends and continuously educate yourself to refine your trading strategies. Regularly review your performance data to identify areas for improvement.",
+            "description": "Continuous improvement is essential for long-term success. Keep learning, stay updated on market trends, and regularly review your performance to find opportunities for enhancement."
+        }
+    }
+}
